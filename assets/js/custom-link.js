@@ -1,0 +1,13 @@
+var link, sandbox = "";
+link = pw_script_vars.var;
+sandbox = pw_script_vars.sandbox;
+console.log(sandbox);
+jQuery('#wpbody').empty();
+var iframe = document.createElement('iframe');
+iframe.frameBorder=0;
+iframe.width="100%";
+iframe.style.height="calc(100vh - 70px)";
+iframe.id="custom-url";
+iframe.setAttribute("src", link);
+iframe.setAttribute("sandbox", sandbox);
+document.getElementById("wpbody").appendChild(iframe);
